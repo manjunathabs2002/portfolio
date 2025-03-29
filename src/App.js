@@ -77,6 +77,23 @@ const projects = [
   },
 ];
 
+const educationDetails = [
+  {
+    degree: 'Master of Computer Applications (MCA)',
+    institution: 'Christ Academy Institute for Advanced Studies, Bangalore',
+    year: '2023 - 2025',
+    description:
+      'I pursued my MCA, gaining expertise in software development, web technologies,algorithms,data structures and database management. During the course I got hands-on experience in building full-stack applications, system design, and implementing secure backend APIs.',
+  },
+  {
+    degree: 'Bachelor of Computer Applications (BCA)',
+    institution: 'Vivekananda Institute Of Management Studies, Bangalore',
+    year: '2020 - 2023',
+    description:
+      'I completed my BCA, where I developed a strong foundation in programming, database management, and web development. The course equipped me with practical knowledge in building applications, software engineering, and understanding core computer science concepts.',
+  },
+];
+
 const Portfolio = () => {
   return (
     <div className="min-h-screen bg-gray-50 p-8">
@@ -104,7 +121,7 @@ const Portfolio = () => {
         {/* Contact Links */}
         <div className="flex justify-center space-x-4 mt-6">
           <a
-            href="bsmanjunatha146@gmail.com"
+            href="mailto:bsmanjunatha146@gmail.com"
             className="text-blue-600 hover:text-blue-800 inline-flex items-center"
           >
             <MailIcon /> <span className="ml-2">Email</span>
@@ -142,6 +159,23 @@ const Portfolio = () => {
           analysis. I'm dedicated to creating innovative solutions and
           continuously learning new technologies.
         </p>
+      </section>
+
+      {/* Education Section */}
+      <section className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8 mb-12">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Education</h2>
+        <div className="space-y-6">
+          {educationDetails.map((education, index) => (
+            <div key={index} className="border-b pb-4">
+              <h3 className="text-xl font-semibold text-gray-800">
+                {education.degree}
+              </h3>
+              <p className="text-gray-600">{education.institution}</p>
+              <p className="text-gray-500 text-sm">{education.year}</p>
+              <p className="text-gray-600 mt-2">{education.description}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Projects Section */}
@@ -208,7 +242,7 @@ const Portfolio = () => {
 
       {/* Footer */}
       <footer className="text-center mt-12 text-gray-600">
-        <p>© 2024 Your Name. All rights reserved.</p>
+        <p>© 2025 Manjunath. All rights reserved.</p>
       </footer>
     </div>
   );
